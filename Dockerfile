@@ -2,7 +2,9 @@ FROM telegraf:latest
 
 MAINTAINER Michael Boehm
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && \
+    apt-get dist-upgrade && \
+    apt-get install -y --no-install-recommends \
     python3 \
     python3-pip && \
     /usr/bin/python3 -m pip install --upgrade pip && \
