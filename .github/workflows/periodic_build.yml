@@ -1,0 +1,15 @@
+---
+
+name: Periodic build
+'on':
+  schedule:
+    - cron: "0 3 * * 0,3"
+
+jobs:
+
+  build:
+    name: Trigger build on Docker Hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: .
+        run: curl -X POST https://hub.docker.com/${{ secrets.DOCKERHUB_TRIGGER }}
