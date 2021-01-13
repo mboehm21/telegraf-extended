@@ -1,2 +1,2 @@
-## mboehm21/telegraf-python
-The official telegraf image with python3-support to use in inputs.exec
+## mboehm21/telegraf-extended
+The official telegraf image with python3-support and additional tools to use in inputs.exec
